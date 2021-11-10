@@ -26,7 +26,7 @@ class YoutubeApi(CronJobBase):
         last_request_time = time_now - timedelta(minutes=5)
      
         
-        #####################################################
+    #check for api keys
 
        
 
@@ -56,7 +56,7 @@ class YoutubeApi(CronJobBase):
         
 
           
-
+            
             for item in res['items']:
                 video_id = item['id']['videoId']
                 publishedDateTime = item['snippet']['publishedAt']
@@ -65,7 +65,7 @@ class YoutubeApi(CronJobBase):
                 thumbnailsUrls = item['snippet']['thumbnails']['default']['url']
                 channel_id = item['snippet']['channelId']
                 channel_title = item['snippet']['channelTitle']
-        
+                #adding in database
                 Videos.objects.create(
                     video_id=video_id,
                     title=title,
