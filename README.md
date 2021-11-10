@@ -32,5 +32,10 @@ To make an API to fetch latest videos sorted in reverse chronological order of t
 - Run cron using `python manage.py runcrons`
 - Run the server using `python manage.py runserver`
 
-(screenshot/admin-page.png)
-(screenshot/videos-route)
+
+### Admin Page
+
+![admin-page](screenshots/admin-page.png)
+
+### Videos Page
+![videos-route](screenshots/videos-route.png)
